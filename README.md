@@ -1,2 +1,107 @@
-# Study-Compass
-A personal CLI tool for recording study activities, tracking progress, and generating reflections.
+# Study Compass
+
+Study Compass is a personal CLI tool for recording study activities, tracking progress, and generating reflections.
+
+It is designed for my daily learning process, including:
+- algorithm practice
+- course learning
+- project progress
+- weekly review
+
+## Overview
+
+I built this project to make my study records more structured and easier to review.
+
+In daily learning, it is easy for useful information to become scattered across notes, temporary plans, or unfinished thoughts. This project is my attempt to turn those fragmented learning activities into clear, searchable, and reusable records.
+
+Rather than building a project only for demonstration, I want this to be a tool I can actually use in real life.
+
+## Features
+
+The current version supports:
+- adding a study record
+- viewing saved records
+- storing records locally in JSON format
+- organizing records with structured fields
+
+Each record may include:
+- date
+- category
+- title
+- tags
+- status
+- difficulty
+- blockers
+- note
+
+## Why I Made This Project
+
+This project started from a simple need:
+
+I often work on multiple kinds of tasks at the same time, such as solving algorithm problems, studying university courses, and building small projects. Without a structured way to record them, it becomes difficult to review progress, identify repeated problems, or build long-term learning habits.
+
+So I created this tool to help myself:
+- record what I am learning
+- track how I am progressing
+- notice where I get stuck
+- reflect on my study process more clearly
+
+## Project Structure
+
+```text
+.
+├─ main.py
+├─ models.py
+├─ storage.py
+├─ data/
+│  └─ records.json
+└─ README.md
+```
+
+## Usage
+
+Run the program with:
+python main.py
+
+Then choose from the available options in the CLI interface to:
+- add a new record
+- view existing records
+- save progress locally
+
+## Example Record
+
+A study record may look like this:
+{
+  "date": "2026-03-15",
+  "category": "algorithm",
+  "title": "P1216 Number Triangles",
+  "tags": ["dynamic-programming", "linear-dp"],
+  "status": "completed",
+  "difficulty": 2,
+  "blockers": "Needed time to understand the state transition.",
+  "note": "A classic introductory DP problem. Good for practicing bottom-up thinking."
+}
+
+## Design Idea
+
+The core idea of this project is simple:
+- keep study records lightweight
+- preserve useful context
+- make later review easier
+- gradually build a clearer picture of long-term learning
+
+Instead of writing long and irregular notes every time, I prefer a structured format that is quick to record and easy to analyze later.
+
+## Development Goal
+I hope this project can gradually grow from a simple record keeper into a practical personal learning companion.
+
+At the same time, this repository is also a record of my growth in:
+- designing tools for real use
+- organizing personal data
+- thinking about how software can support learning
+
+## Note
+
+This is a personal learning project and is still under active development.
+
+The structure, implementation, and features may continue to change as I improve both the tool itself and my understanding of my own study workflow.
