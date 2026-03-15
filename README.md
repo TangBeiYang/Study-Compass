@@ -71,6 +71,8 @@ Then choose from the available options in the CLI interface to:
 ## Example Record
 
 A study record may look like this:
+
+```json
 {
   "date": "2026-03-15",
   "category": "algorithm",
@@ -81,6 +83,7 @@ A study record may look like this:
   "blockers": "Needed time to understand the state transition.",
   "note": "A classic introductory DP problem. Good for practicing bottom-up thinking."
 }
+```
 
 ## Design Idea
 
