@@ -74,7 +74,7 @@ A study record may look like this:
 
 ```json
 {
-  "date": "2026-03-15",
+  "date": [2026, 3, 10],
   "category": "algorithm",
   "title": "P1216 Number Triangles",
   "tags": ["dynamic-programming", "linear-dp"],
