@@ -75,10 +75,10 @@ A study record may look like this:
 ```json
 {
   "date": [2026, 3, 10],
-  "category": "algorithm",
+  "category": "problem",
   "title": "P1216 Number Triangles",
   "tags": ["dynamic-programming", "linear-dp"],
-  "status": "completed",
+  "status": "hinted",
   "difficulty": 2,
   "blockers": "Needed time to understand the state transition.",
   "note": "A classic introductory DP problem. Good for practicing bottom-up thinking."
