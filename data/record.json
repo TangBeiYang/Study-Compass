@@ -1,0 +1,40 @@
+[
+    {
+        "date": [
+            2026,
+            3,
+            10
+        ],
+        "category": "problem",
+        "title": "P1873 砍树",
+        "tags": [
+            "binary-search"
+        ],
+        "status": "hinted",
+        "difficulty": 3,
+        "blockers": [
+            "单调性判断不稳定"
+        ],
+        "note": "知道要二分答案，但边界写得不熟。"
+    },
+    {
+        "date": [
+            2026,
+            3,
+            15
+        ],
+        "category": "problem",
+        "title": "P1966 [NOIP 2013 提高组] 火柴排队",
+        "tags": [
+            "离散化",
+            "树状数组"
+        ],
+        "status": "hinted",
+        "difficulty": 5,
+        "blockers": [
+            "把两个数组一一对应时没对应好",
+            "没看出来最后是求逆序对"
+        ],
+        "note": ""
+    }
+]
