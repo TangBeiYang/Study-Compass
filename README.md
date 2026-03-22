@@ -18,9 +18,12 @@ Rather than building a project only for demonstration, I want this to be a tool 
 
 ## Features
 
+## Features
+
 The current version supports:
 - adding a study record
-- viewing saved records
+- viewing all saved records
+- filtering records by category, status, difficulty, or date
 - storing records locally in JSON format
 - organizing records with structured fields
 
@@ -52,10 +55,10 @@ So I created this tool to help myself:
 .
 ├─ main.py
 ├─ models.py
+├─ record_workflow.py
 ├─ storage.py
-├─ record_workflow
 ├─ data/
-│  └─ records.json
+│  └─ record.json
 └─ README.md
 ```
 
@@ -67,7 +70,18 @@ python main.py
 Then choose from the available options in the CLI interface to:
 - add a new record
 - view existing records
-- save progress locally
+- filter records
+- exit
+When creating a record, the program will guide you through:
+- basic information
+- topic and method
+- completion quality
+- reflection and notes
+
+## Storage
+
+Records are stored locally in `data/record.json` using JSON format.
+The program loads existing records on startup-related operations and appends new entries through a simple storage layer.
 
 ## Example Record
 
@@ -77,12 +91,12 @@ A study record may look like this:
 {
   "date": [2026, 3, 10],
   "category": "problem",
-  "title": "P1216 Number Triangles",
-  "tags": ["dynamic-programming", "linear-dp"],
+  "title": "P1873 Cut Trees",
+  "tags": ["binary-search"],
   "status": "hinted",
-  "difficulty": 2,
-  "blockers": "Needed time to understand the state transition.",
-  "note": "A classic introductory DP problem. Good for practicing bottom-up thinking."
+  "difficulty": 3,
+  "blockers": ["Monotonicity check was not stable."],
+  "note": "I knew I should binary search the answer, but I was not familiar with boundary handling."
 }
 ```
 
