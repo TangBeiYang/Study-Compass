@@ -18,16 +18,16 @@ Rather than building a project only for demonstration, I want this to be a tool 
 
 ## Features
 
-## Features
-
 The current version supports:
 - adding a study record
 - viewing all saved records
-- filtering records by category, status, difficulty, or date
+- filtering records by date, category, title, tag, status, difficulty, blocker, or note
+- managing records through view, edit, and delete actions
 - storing records locally in JSON format
 - organizing records with structured fields
 
 Each record may include:
+- id
 - date
 - category
 - title
@@ -55,8 +55,12 @@ So I created this tool to help myself:
 .
 ├─ main.py
 ├─ models.py
+├─ record_constants.py
+├─ record_query.py
+├─ record_ui.py
 ├─ record_workflow.py
 ├─ storage.py
+├─ requirements.txt
 ├─ data/
 │  └─ record.json
 └─ README.md
@@ -71,6 +75,7 @@ Then choose from the available options in the CLI interface to:
 - add a new record
 - view existing records
 - filter records
+- manage records
 - exit
 When creating a record, the program will guide you through:
 - basic information
@@ -81,22 +86,28 @@ When creating a record, the program will guide you through:
 ## Storage
 
 Records are stored locally in `data/record.json` using JSON format.
-The program loads existing records on startup-related operations and appends new entries through a simple storage layer.
+
+The program automatically:
+- loads existing records
+- assigns unique ids to new records
+- normalizes date values
+- writes updates back to local storage
 
 ## Example Record
 
-A study record may look like this:
+Here is an example of a study record:
 
 ```json
 {
-  "date": [2026, 3, 10],
+  "id": 3,
+  "date": [2026, 3, 15],
   "category": "problem",
-  "title": "P1873 Cut Trees",
-  "tags": ["binary-search"],
-  "status": "hinted",
-  "difficulty": 3,
-  "blockers": ["Monotonicity check was not stable."],
-  "note": "I knew I should binary search the answer, but I was not familiar with boundary handling."
+  "title": "P1216 Number Triangles",
+  "tags": ["dynamic-programming", "linear-dp"],
+  "status": "solved",
+  "difficulty": 2,
+  "blockers": ["State transition was not clear at first."],
+  "note": "A classic introductory DP problem."
 }
 ```
 
@@ -117,6 +128,15 @@ At the same time, this repository is also a record of my growth in:
 - designing tools for real use
 - organizing personal data
 - thinking about how software can support learning
+
+## Future Plans
+
+Possible future improvements include:
+- sorting records by date or difficulty
+- exporting records to other formats
+- generating weekly or monthly summaries
+- improving the CLI interaction experience
+- adding basic statistics and visual summaries
 
 ## Note
 
