@@ -23,6 +23,7 @@ The current version supports:
 - viewing all saved records
 - filtering records by date, category, title, tag, status, difficulty, blocker, or note
 - managing records through view, edit, and delete actions
+- choosing records either from all records or from filtered results
 - storing records locally in JSON format
 - organizing records with structured fields
 
@@ -69,7 +70,9 @@ So I created this tool to help myself:
 ## Usage
 
 Run the program with:
+```bash
 python main.py
+```
 
 Then choose from the available options in the CLI interface to:
 - add a new record
@@ -77,11 +80,17 @@ Then choose from the available options in the CLI interface to:
 - filter records
 - manage records
 - exit
-When creating a record, the program will guide you through:
+
+When creating or editing a record, the program will guide you through:
 - basic information
 - topic and method
 - completion quality
 - reflection and notes
+
+## Dependencies
+
+This project currently uses Python standard library only.
+No third-party packages are required.
 
 ## Storage
 
