@@ -10,6 +10,7 @@ class Record:
     difficulty: int
     blockers: list[str]
     note: str
+    id: int | None = None
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -20,6 +21,7 @@ class Record:
             date_text = f"{y:04d}-{m:02d}-{d:02d}"
         else:
             date_text = str(self.date)
+        print(f"id: {self.id}")
         print(f"date: {date_text}")
         print(f"category: {self.category}")
         print(f"title: {self.title}")
