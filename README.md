@@ -21,7 +21,7 @@ Rather than building a project only for demonstration, I want this to be a tool 
 The current version supports:
 - adding a study record
 - viewing all saved records
-- filtering records by date, category, title, tag, status, difficulty, blocker, or note
+- filtering records by exact date, recent days, category, title, tag, status, difficulty, blocker, or note
 - managing records through view, edit, and delete actions
 - choosing records either from all records or from filtered results
 - storing records locally in JSON format
@@ -57,11 +57,11 @@ So I created this tool to help myself:
 ├─ main.py
 ├─ models.py
 ├─ record_constants.py
+├─ record_edit.py
 ├─ record_query.py
 ├─ record_ui.py
 ├─ record_workflow.py
 ├─ storage.py
-├─ requirements.txt
 ├─ data/
 │  └─ record.json
 └─ README.md
@@ -77,7 +77,7 @@ python main.py
 Then choose from the available options in the CLI interface to:
 - add a new record
 - view existing records
-- filter records
+- filter records, including recent x days
 - manage records
 - exit
 
@@ -100,6 +100,7 @@ The program automatically:
 - loads existing records
 - assigns unique ids to new records
 - normalizes date values
+- fixes invalid or duplicated ids when loading data
 - writes updates back to local storage
 
 ## Example Record
@@ -146,6 +147,12 @@ Possible future improvements include:
 - generating weekly or monthly summaries
 - improving the CLI interaction experience
 - adding basic statistics and visual summaries
+
+## Note
+
+This is a personal learning project and is still under active development.
+
+The structure, implementation, and features may continue to change as I improve both the tool itself and my understanding of my own study workflow.
 
 ## Note
 
